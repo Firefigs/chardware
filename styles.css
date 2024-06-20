@@ -48,6 +48,7 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure the description is hidden initially */
 }
 
 section h2 {
@@ -55,6 +56,19 @@ section h2 {
     padding-bottom: 10px;
 }
 
-section.clicked .description {
+section img {
     display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+section .description {
+    display: none; /* Hide the description initially */
+    margin-top: 10px;
+}
+
+section.clicked .description {
+    display: block; /* Show the description when section is clicked */
 }
