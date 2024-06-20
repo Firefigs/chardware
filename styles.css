@@ -29,6 +29,11 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
 }
 
 main {
@@ -41,6 +46,12 @@ section {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 section h2 {

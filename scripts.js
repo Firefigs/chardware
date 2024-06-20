@@ -18,14 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Example interactive function: Highlight section on click
+    // Hover Effects
     const sections = document.querySelectorAll('section');
     for (const section of sections) {
-        section.addEventListener('click', function() {
-            this.style.backgroundColor = '#e0e0e0';
-            setTimeout(() => {
-                this.style.backgroundColor = '#fff';
-            }, 500);
+        section.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.02)';
+            this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+        });
+        section.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
         });
     }
 });
